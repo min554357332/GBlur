@@ -3,19 +3,6 @@
 
 import SwiftUI
 
-public struct GBlurView: View {
-    public let radius: CGFloat
-    
-    public init(_ radius: CGFloat = 8.0) {
-        self.radius = radius
-    }
-    
-    public var body: some View {
-        Spacer()
-            .gblur(radius: self.radius)
-    }
-}
-
 extension View {
     public func gblur(radius: CGFloat = 8.0) -> some View {
         assert(radius >= 0.0, "Radius must be greater than or equal to 0")
