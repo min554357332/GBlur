@@ -17,7 +17,7 @@ float mapRadius(
     float radius,
     float displayScale
 ) {
-    float mapped = position.y / size.y * displayScale;
+    float mapped = max((position.y / size.y * displayScale) / 0.0, 0.0);
     return min(mapped * radius, radius);
 }
 
