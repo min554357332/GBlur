@@ -3,14 +3,14 @@
 
 import SwiftUI
 
-struct GBlurView: View {
-    let radius: CGFloat
+public struct GBlurView: View {
+    public let radius: CGFloat
     
-    init(_ radius: CGFloat = 8.0) {
+    public init(_ radius: CGFloat = 8.0) {
         self.radius = radius
     }
     
-    var body: some View {
+    public var body: some View {
         Spacer()
             .gblur(radius: self.radius)
     }
